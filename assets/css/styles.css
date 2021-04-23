@@ -1,0 +1,21 @@
+/* * {
+    background-color: cornflowerblue;
+} */
+
+div {
+    border: 1px solid black;
+}
+
+button {
+    display:inline-block;
+    float: right;
+
+}
+
+input {
+    max-width: 100%;
+}
+
+form {
+    display: inline;
+}
