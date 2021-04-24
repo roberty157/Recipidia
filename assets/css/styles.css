@@ -1,25 +1,20 @@
-<<<<<<< HEAD
-/* * {
-    background-color: cornflowerblue;
-} */
 
-div {
-    border: 1px solid black;
-}
 
 button {
     display:inline-block;
-    float: right;
+    width: 10%;
+
 
 }
 
 input {
-    max-width: 100%;
+    max-width: 90%;
 }
 
 form {
-    display: inline;
-=======
+    display: inline-flex;
+    width:100%;
+} 
 .carousel-item h3{
     font-size: 20px;
     text-align: center;
@@ -28,5 +23,4 @@ form {
 .recipeDefault {
     font-size: 30px;
     text-align: center;
->>>>>>> 8bf03bd886f36f10f954982a7fdc52edd036cf26
 }
