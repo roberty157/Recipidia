@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* * {
     background-color: cornflowerblue;
 } */
@@ -18,4 +19,14 @@ input {
 
 form {
     display: inline;
+=======
+.carousel-item h3{
+    font-size: 20px;
+    text-align: center;
+}
+
+.recipeDefault {
+    font-size: 30px;
+    text-align: center;
+>>>>>>> 8bf03bd886f36f10f954982a7fdc52edd036cf26
 }
