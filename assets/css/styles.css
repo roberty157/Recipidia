@@ -1,3 +1,6 @@
+/* * {
+    background-color: cornflowerblue;
+} */
 
 
 button {
@@ -15,6 +18,7 @@ form {
     display: inline-flex;
     width:100%;
 } 
+    display: inline;
 .carousel-item h3{
     font-size: 20px;
     text-align: center;
