@@ -1,7 +1,5 @@
 //(Have to figure out how to be able to change URLS) according to parameters
 
-
-
 var ingredients = document.getElementById("ingredients");
 var ingredientsList = document.getElementById("listIngredients");
 
@@ -34,3 +32,44 @@ fetch(requestUrl)
     cookInstructions.appendChild(listItem);
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//button local storage
+var save = document.getElementById("saveBtn"); //selects button
+save.onclick = saveData //on click button saves data
+
+function saveData(){
+  localStorage.setItem("server", input.value);
+  var storedValue = localStorage.getItem("server");
+}
