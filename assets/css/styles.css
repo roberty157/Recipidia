@@ -1,8 +1,9 @@
 /* * {
     background-color: cornflowerblue;
 } */
-.nav-title {
-    display: center;
+.nav-wrapper span {
+    font-family: 'Dancing Script', cursive, Arial, Helvetica, sans-serif;
+    font-size: 70px;
 }
 
 button {
