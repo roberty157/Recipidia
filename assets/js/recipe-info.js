@@ -34,3 +34,14 @@ fetch(requestUrl)
     cookInstructions.appendChild(listItem);
   }
 });
+
+var requestURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q={search term}&key=AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+var iframe= document.getElementById("iframe")
+
+var apiKey ="AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+
+fetch(requestURL)
+.then(function (response) {
+  return response.json();
+});
+const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
