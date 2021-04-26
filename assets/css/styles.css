@@ -1,7 +1,9 @@
 /* * {
     background-color: cornflowerblue;
 } */
-
+.nav-title {
+    display: center;
+}
 
 button {
     display:inline-block;
@@ -18,7 +20,7 @@ form {
     display: inline-flex;
     width:100%;
 } 
-    display: inline;
+   
 .carousel-item h3{
     font-size: 20px;
     text-align: center;
