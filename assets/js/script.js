@@ -6,8 +6,8 @@
 //https://api.spoonacular.com/recipes/complexSearch?apiKey=8cfcf83c0b1f43e0967daa90da468529&query={name}
 
 //get recipe information
-//given id
-//https://api.spoonacular.com/recipes/{recipe id}/information?apiKey=8cfcf83c0b1f43e0967daa90da468529
+//given idhttps://api.spoonacular.com/recipes/{recipe id}/information?apiKey=8cfcf83c0b1f43e0967daa90da468529
+//
 
 
 
