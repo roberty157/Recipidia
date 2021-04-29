@@ -9,8 +9,6 @@
 button {
     display:inline-block;
     width: 10%;
-
-
 }
 
 input {
@@ -35,4 +33,8 @@ form {
 .container {
     display:flex;
     justify-content: center;
+}
+
+.subtitle{
+    font-size: 40px;
 }

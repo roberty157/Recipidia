@@ -43,7 +43,7 @@ function runAPI(event) {
     console.log(data)
     for (var i = 0; i < data.results; i++) {
       var resultLinks = document.createElement('li');
-      resultLinks.textContent = data.results[i];
+      resultLinks.textContent = data.results[i].sourceURL;
       searchTerm.appendChild(resultLinks);
     }
   })};
