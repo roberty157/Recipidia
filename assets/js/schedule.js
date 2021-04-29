@@ -63,6 +63,11 @@ function displayRecipes(recipeList){
             //console.log("drag start");
             drag(event);
         });
+        recipeItem.addEventListener("click", function(event){
+            event.preventDefault();
+            console.log("id",id);        
+            getRecipeInfo(id);
+        });
         recipeListEl.appendChild(recipeItem);
     })
 }
@@ -175,7 +180,11 @@ function fillBoxes(){
             recipeItem.setAttribute("id",id);
             boxArray[i].appendChild(recipeItem);
 
-
+            recipeItem.addEventListener("click", function(event){
+                event.preventDefault();
+                console.log("id",id);        
+                getRecipeInfo(id);
+            });
            
 
             recipeItem.setAttribute("draggable", "true");
@@ -191,3 +200,48 @@ function fillBoxes(){
     }
 }
 fillBoxes();
+
+
+function getRecipeInfo(id){
+    var url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=8cfcf83c0b1f43e0967daa90da468529`;
+    fetch(url)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        //console.log(data);
+        showRecipe(data);
+    })
+}
+
+var recipeEl = document.querySelector("#showRecipe");
+var recipeTitleEl = document.querySelector("#recipeTitle");
+var recipeImgEl = document.querySelector("#recipePhoto");
+var recipeInstructionEl = document.querySelector("#recipeInstruction");
+//a link to the website
+var moreButton = document.querySelector("#moreButton");
+//<a class="waves-effect waves-light btn">More</a>
+function showRecipe(data){  
+    console.log("showRecipe", data["title"]);
+    console.log(data);
+    recipeTitleEl.textContent = "";
+    
+    recipeInstructionEl.textContent ="";
+    
+    recipeTitleEl.textContent = data["title"];
+    recipeImgEl.setAttribute("src",data["image"]);
+    recipeInstructionEl.innerHTML = data["instructions"];
+
+    moreButton.innerHTML = `<a href=${data["spoonacularSourceUrl"]} class="waves-effect waves-light btn" target="_blank">More</a>`
+    //var moreButton = document.createElement("a");
+    //moreButton.setAttribute("class","waves-effect waves-light btn");
+    //moreButton.textContent = 
+
+    
+}
+
+var homeButton = document.querySelector("#homeButton");
+homeButton.addEventListener("click",function(){
+    console.log("home");
+    location.assign("./index.html");
+});
