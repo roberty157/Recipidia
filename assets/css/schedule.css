@@ -1,0 +1,41 @@
+.row{
+    margin:5px !important;
+}
+.calendar{
+    display:flex;
+    
+    margin:5px;
+}
+.calendar>.s8{
+    padding-right:10px;
+    padding-left:10px;
+}
+.day{
+    width: 14.285714285714285714285714285714%;
+    border: 1px black solid;
+}
+.day>h5{
+    text-align:center;
+}
+
+#recipeList{
+    border: 1px solid black;
+    min-height:100px;
+}
+.box {
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa; 
+}
+
+.showRecipe{
+    padding:10px;
+}
+
+#recipePhoto{
+    width:100px;
+}
+
+#homeButton{
+    margin-left:10px
+}
