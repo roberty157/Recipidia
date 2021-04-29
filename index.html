@@ -21,7 +21,7 @@
         <div>
         <form>
             <input type="text" class="searchInputBox" placeholder="Search.."></input>
-            <button type="btn" class="btn waves-effect">Search</button>
+            <button type="btn" class="btn waves-effect" id="searchBtn">Search</button>
         </form>
     </div>
         </div>
@@ -37,9 +37,8 @@
         
       </nav>
       
-    
+      <div class="carousel">
    <h2 class="recipeDefault">Try these recipes!</h2>
-    <div class="carousel">
         <div class="carousel-item">
             <img src="assets/images/1505411-556x370.jpeg"></a>
             <h3>Ground Beef Street Tacos</h3>
@@ -55,7 +54,16 @@
             <h3>Air Fryer Chicken Strips</h3>
             <!--https://spoonacular.com/recipes/air-fryer-chicken-strips-1507411-->
       </div>
-</body>
+
+      <!--search results-->
+  
+      <main>
+      <div class="col-12 col-md-8">
+        <h2 class="subtitle">Search results for:<span id="search-term"></span></h2>
+        <div id="results-container" class="list-group"></div>
+            <ul id=sourceLink></ul>
+      </div>
+
       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -63,5 +71,7 @@
     $(document).ready(function(){   
         $('.carousel').carousel();
   });</script>
+  <script src="./assets/js/script.js"></script>
+
 </body>
 
