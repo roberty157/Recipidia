@@ -12,7 +12,7 @@ function runAPI(event) {
   console.log("hello")
 
 var searchTerm=document.querySelector(".searchInputBox").value //created this element to grab the users search
-var requestUrl= "https://api.spoonacular.com/recipes/complexSearch?apiKey=8cfcf83c0b1f43e0967daa90da468529&addRecipeInformation=true&query="+searchTerm
+var requestUrl= "https://api.spoonacular.com/recipes/complexSearch?apiKey=7f9a10e4af7f41bbbf1b637f9bf11892&addRecipeInformation=true&query="+searchTerm
 // fetch(requestUrl)
 
 // .then(function (response) {
@@ -52,19 +52,19 @@ fetch(requestUrl)
   }
 });
 //youtube api
-var youTubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+searchTerm+"_recipe"+"&key=AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
-var iframe= document.getElementById("iframe")
+// var youTubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+searchTerm+"_recipe"+"&key=AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+// var iframe= document.getElementById("iframe")
 
-var apiKey ="AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+// var apiKey ="AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
 
-fetch(youTubeURL)
-.then(function (response) {
-  return response.json();
-}).then(function(data){
-  console.log(data)
-  iframe.setAttribute("src","https://www.youtube.com/embed/"+data.items[0].id.videoId)
-  // const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
-})
+// fetch(youTubeURL)
+// .then(function (response) {
+//   return response.json();
+// }).then(function(data){
+//   console.log(data)
+//   iframe.setAttribute("src","https://www.youtube.com/embed/"+data.items[0].id.videoId)
+//   // const getSearchTerm = () => searchTerms[Math.floor(Math.random() * (searchTerms.length-1))];
+// })
 
 }
 
@@ -103,11 +103,25 @@ window.location.replace("./test.html")
 
 
 
+function getParams() {
+  // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
+  var searchParamsArr = document.location.search.split('&');
+  
+ 
 
+  // Get the query and format values
+  var id = searchParamsArr[0].split('=').pop();
+  console.log(id)
+  //var format = searchParamsArr[1].split('=').pop();
+  //console.log(query);
+  
+  
+  var apiKEy= `https://api.spoonacular.com/recipes/${id}/information?apiKey=7f9a10e4af7f41bbbf1b637f9bf11892`
+  
 
-
-
-
+  //searchApi(query, format);
+}
+getParams();
 
 
 
