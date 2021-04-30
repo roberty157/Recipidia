@@ -23,6 +23,7 @@
 </iframe>
 */
 
+/*
 var searchTerm = document.getElementById("search-term");
 var resultLinks = document.getElementById("sourcelink");
 
@@ -50,3 +51,23 @@ function runAPI(event) {
   })};
 
 document.getElementById("searchBtn").onclick = runAPI;
+*/
+
+
+//----------------------
+var searchBtnEl = $("#searchBtn");
+searchBtnEl.on('click',function(event){
+  event.preventDefault();
+  var recipe= document.querySelector(".searchInputBox").value;
+  //console.log(recipe);
+  if (!recipe) {
+      console.error('You need a search input value!');
+      return;
+    }
+  
+  var queryString = './recipe-results.html?q=' + recipe;
+
+  location.assign(queryString);
+
+  //searchRecipesByName(recipe);
+})
