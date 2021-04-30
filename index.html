@@ -17,34 +17,24 @@
    
     <nav class="nav-extended">
         <div class="nav-wrapper">
-        <span class="nav-title">Recipedia</span>
+        <span class="nav-title" style="padding-left: 20px;">Recipedia</span>
         <div>
         <form>
-            <input type="text" class="searchInputBox" placeholder="Search.."></input>
+            <input type="text" class="searchInputBox" style="padding-left: 20px" placeholder="Search.."></input>
             <button type="btn" class="btn waves-effect" id="searchBtn">Search</button>
         </form>
     </div>
         </div>
         <div class="nav-wrapper">
             <ul class="left">
-            <li><a> Chicken</a></li>
-            <li><a> Pork </a></li>
-            <li><a> Beef</a></li>
-            <li><a> Fish</a></li>
-            <li><a> Tofu</a></li>
+            <li id="chicken"><a> Chicken</a></li>
+            <li id="pork"><a> Pork </a></li>
+            <li id="beef"><a> Beef</a></li>
+            <li id="fish"><a> Fish</a></li>
+            <li id="tofu"><a>Tofu</a></li>
           </ul>
         </div>
     </nav>
-
-    <!--search results-->
-    <main>
-        <div>
-          <h2 class="subtitle"><span id="search-term"></span></h2>
-          <div id="results-container" class="list-group">
-              <ul id=sourceLink></ul>
-              </div>
-        </div>
-        </main>
       
     <!--carousel-->
       <div class="carousel">
