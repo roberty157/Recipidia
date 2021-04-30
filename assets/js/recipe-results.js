@@ -92,3 +92,15 @@ searchButtonEl.on('click',function(event){
 
 
 var videoResultEl = $("#videoResult");
+var youTubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+query+"_recipe"+"&key=AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+var iframe= document.getElementById("iframe")
+
+var apiKey ="AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+
+fetch(youTubeURL)
+.then(function (response) {
+  return response.json();
+}).then(function(data){
+  console.log(data)
+  iframe.setAttribute("src","https://www.youtube.com/embed/"+data.items[0].id.videoId)
+})

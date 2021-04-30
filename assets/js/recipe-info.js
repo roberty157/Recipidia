@@ -13,20 +13,20 @@ function runAPI(event) {
 
 var searchTerm=document.querySelector(".searchInputBox").value //created this element to grab the users search
 var requestUrl= "https://api.spoonacular.com/recipes/complexSearch?apiKey=8cfcf83c0b1f43e0967daa90da468529&addRecipeInformation=true&query="+searchTerm
-fetch(requestUrl)
+// fetch(requestUrl)
 
-.then(function (response) {
-  return response.json();
-})
-.then(function (data) {
-  // var data=res.result
-  console.log(data)
-  for (var i = 0; i < data.results.length; i++) {
-    var ingredientsList = document.createElement('li');
-    ingredientsList.textContent = data.results[i].sourceUrl;
-    ingredients.appendChild(ingredientsList);//Changed list item to ingredients list to append. and list item doesnt exist
-  }
-});
+// .then(function (response) {
+//   return response.json();
+// })
+// .then(function (data) {
+//   // var data=res.result
+//   console.log(data)
+//   for (var i = 0; i < data.results.length; i++) {
+//     var ingredientsList = document.createElement('li');
+//     ingredientsList.textContent = data.results[i].sourceUrl;
+//     ingredients.appendChild(ingredientsList);//Changed list item to ingredients list to append. and list item doesnt exist
+//   }
+// });
 
 //////////////
 
@@ -52,7 +52,7 @@ fetch(requestUrl)
   }
 });
 //youtube api
-var youTubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+searchTerm+"_cooking"+"&key=AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
+var youTubeURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q="+searchTerm+"_recipe"+"&key=AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
 var iframe= document.getElementById("iframe")
 
 var apiKey ="AIzaSyBwL0yd91L36FMNSfLFcw6VeqIN2PpoYbQ"
