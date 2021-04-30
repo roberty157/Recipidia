@@ -30,7 +30,8 @@ function runAPI(event) {
     event.preventDefault();
   console.log("hello")
   
-  var searchTerm=document.querySelector(".searchInputBox").value //created this element to grab the users search
+  var searchTerm=document.querySelector(".searchInputBox").value
+  var resultsEl = document.getElementById("sourceLink"); 
   var requestUrl= "https://api.spoonacular.com/recipes/findByIngredients?apiKey=8cfcf83c0b1f43e0967daa90da468529&ingredients=" + searchTerm
   
   fetch(requestUrl)
@@ -44,7 +45,7 @@ function runAPI(event) {
     for (var i = 0; i < data.results; i++) {
       var resultLinks = document.createElement('li');
       resultLinks.textContent = data.results[i].sourceURL;
-      searchTerm.appendChild(resultLinks);
+      resultsLinks.appendChild(resultsEl);
     }
   })};
 
