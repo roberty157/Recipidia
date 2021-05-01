@@ -128,17 +128,31 @@ function getParams() {
           // element.appendChild(imageSource);
         var src = document.getElementById("recipe-image");
         src.appendChild(img);
-      });
       
-  //searchApi(query, format);
-}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
 getParams();
-
-
-
-
-
-
 
 
 
