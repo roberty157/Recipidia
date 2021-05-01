@@ -43,11 +43,11 @@ function displayRecipeResults(results) {
 
 
         var resultTitleEl = $('<div>');
-        resultTitleEl.attr('class', 'col s6');
+        resultTitleEl.attr('class', 'col s8');
         resultTitleEl.html(`<h3>${element["title"]}</h3>`);
 
         var resultImgEl = $('<div>');
-        resultImgEl.attr('class', 'col s6');
+        resultImgEl.attr('class', 'col s8');
         resultImgEl.html(`<img class="resultImg" src=${element["image"]}>`);
 
         /*

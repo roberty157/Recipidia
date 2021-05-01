@@ -25,6 +25,10 @@ form {
     text-align: center;
 }
 
+.carousel{
+    padding-block: 20px;
+}
+
 .recipeDefault {
     font-size: 30px;
     text-align: center;
