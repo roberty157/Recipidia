@@ -97,28 +97,39 @@ localStorage.setItem("currentRecipe", JSON.stringify(data));
 window.location.replace("./test.html")
 
 }
-
-
-
-
+var imageResults = $('#imageResults');
 
 
 function getParams() {
-  // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
+  // Get the search params out of the URL (i.e. `?q=london$format=photo$name=joel`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
+  console.log(document.location.search)
   var searchParamsArr = document.location.search.split('&');
   
- 
-
   // Get the query and format values
+  console.log(searchParamsArr)
   var id = searchParamsArr[0].split('=').pop();
+  //["?id","633144"]
+  
   console.log(id)
-  //var format = searchParamsArr[1].split('=').pop();
-  //console.log(query);
+  // var format = searchParamsArr[1].split('=').pop();
+  // console.log(query);
   
   
-  var apiKEy= `https://api.spoonacular.com/recipes/${id}/information?apiKey=7f9a10e4af7f41bbbf1b637f9bf11892`
-  
-
+  var apiKey= `https://api.spoonacular.com/recipes/${id}/information?apiKey=7f9a10e4af7f41bbbf1b637f9bf11892`
+  fetch(apiKey)
+  .then (function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+        console.log(data.image)
+        var imageSource= data.image;
+        var img = document.createElement('img')
+        img.src = imageSource
+          // element.appendChild(imageSource);
+        var src = document.getElementById("recipe-image");
+        src.appendChild(img);
+      });
+      
   //searchApi(query, format);
 }
 getParams();
