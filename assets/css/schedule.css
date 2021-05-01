@@ -1,3 +1,7 @@
+.nav-wrapper{
+    padding-left: 20px;
+}
+
 .row{
     margin:5px !important;
 }
@@ -44,8 +48,10 @@
     #media{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         width: fit-content;
         height: fit-content;
+        align-content: flex-start;
     }
 
 }
