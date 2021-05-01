@@ -45,13 +45,14 @@
 }
 
 @media screen and (max-width: 992px) {
-    #media{
+    #media, body {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         width: fit-content;
         height: fit-content;
         align-content: flex-start;
+       
     }
 
 }
