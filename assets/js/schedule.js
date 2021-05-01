@@ -249,3 +249,6 @@ homeButton.addEventListener("click",function(){
 var dateEl = document.querySelector("#date");
 dateEl.style.textAlign = "center";
 dateEl.textContent = moment().format("dddd MMMM Do");
+
+
+
