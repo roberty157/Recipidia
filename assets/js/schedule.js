@@ -245,3 +245,7 @@ homeButton.addEventListener("click",function(){
     console.log("home");
     location.assign("./index.html");
 });
+
+var dateEl = document.querySelector("#date");
+dateEl.style.textAlign = "center";
+dateEl.textContent = moment().format("dddd MMMM Do");
