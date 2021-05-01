@@ -43,12 +43,12 @@ function displayRecipeResults(results) {
 
 
         var resultTitleEl = $('<div>');
-        resultTitleEl.attr('class', 'col s8');
+        resultTitleEl.attr('class', 'col s6');
         resultTitleEl.html(`<h3>${element["title"]}</h3>`);
 
         var resultImgEl = $('<div>');
-        resultImgEl.attr('class', 'col s8');
-        resultImgEl.html(`<img class="resultImg" src=${element["image"]}>`);
+        resultImgEl.attr('class', 'col s6');
+        resultImgEl.html(`<img class="resultImg responsive-img" src=${element["image"]}>`);
 
         /*
         resultEl.html(`<div class="col s6"><h3>${element["title"]}</h3></div>
@@ -107,12 +107,12 @@ fetch(youTubeURL)
         iframe.setAttribute("src", "https://www.youtube.com/embed/" + data.items[0].id.videoId)
 
     })
-.then(function (response) {
-  return response.json();
-}).then(function(data){
-  console.log(data)
-  iframe.setAttribute("src","https://www.youtube.com/embed/"+data.items[0].id.videoId)
-})
+  .then(function (response) {
+    return response.json();
+  }).then(function(data){
+    console.log(data)
+    iframe.setAttribute("src","https://www.youtube.com/embed/"+data.items[0].id.videoId)
+  })
 
 
 //nav bar js
