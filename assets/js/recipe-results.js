@@ -107,3 +107,41 @@ fetch(youTubeURL)
         iframe.setAttribute("src", "https://www.youtube.com/embed/" + data.items[0].id.videoId)
 
     })
+.then(function (response) {
+  return response.json();
+}).then(function(data){
+  console.log(data)
+  iframe.setAttribute("src","https://www.youtube.com/embed/"+data.items[0].id.videoId)
+})
+
+
+//nav bar js
+document.getElementById('chicken').addEventListener('click', function(event){
+  event.preventDefault();
+  var queryString = './recipe-results.html?q=chicken';
+  location.assign(queryString);
+});
+
+document.getElementById('pork').addEventListener('click', function(event){
+  event.preventDefault();
+  var queryString = './recipe-results.html?q=pork';
+  location.assign(queryString);
+});
+
+document.getElementById('beef').addEventListener('click', function(event){
+  event.preventDefault();
+  var queryString = './recipe-results.html?q=beef';
+  location.assign(queryString);
+});
+
+document.getElementById('fish').addEventListener('click', function(event){
+  event.preventDefault();
+  var queryString = './recipe-results.html?q=fish';
+  location.assign(queryString);
+});
+
+document.getElementById('tofu').addEventListener('click', function(event){
+  event.preventDefault();
+  var queryString = './recipe-results.html?q=tofu';
+  location.assign(queryString);
+});
