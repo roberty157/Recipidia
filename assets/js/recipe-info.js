@@ -127,18 +127,32 @@ function getParams() {
         img.src = imageSource
           // element.appendChild(imageSource);
         var src = document.getElementById("recipe-image");
-        src.appendChild(img);
+        src.appendChild(img);  
+        console.log(data)
+        var recipe= document.createElement("li");
+        var displayRecipe = document.getElementById('cookInstructions')
+        recipe.textContent = data.instructions;
+        displayRecipe.appendChild(recipe)
+        
+        var title= document.createElement("h1");
+        var recipeName = document.getElementById('title')
+        recipeName.textContent = data.title;
+        recipeName.appendChild(title)
+
       
-      
+        var liEl = document.createElement("li")
+        liEl.textContent = data.extendedIngredients;
+        var ulEl = document.getElementById('listIngredients');
+        ulEl.appendChild(liEl);
+ 
+      });
+  
+ 
+ 
+}
+getParams();
 
-
-
-
-
-
-
-
-
+ //searchApi(query, format);
 
 
 
